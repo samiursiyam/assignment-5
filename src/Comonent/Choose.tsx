@@ -1,3 +1,4 @@
+
 import type { DataType } from "../Type";
 import type { Dispatch, SetStateAction } from "react";
 
@@ -13,7 +14,6 @@ const Choose = ({
   settoslecte,
 }: ChooseProps) => {
 
-  // এই technology selected আছে কি না
   const isSelected = toslecte.some(
     (item) => item.id === skillsData.id
   );
@@ -21,22 +21,19 @@ const Choose = ({
   const hendleisSelected = () => {
     if (isSelected) return;
 
-    settoslecte([...toslecte, skillsData]);
+    settoslecte((prev) => [...prev, skillsData]);
   };
 
   return (
     <div>
       <div
-        className={`w-full max-w-sm rounded-2xl border p-6
-        transition-all duration-500
-        ${
+        className={`w-full max-w-sm rounded-2xl border p-6 transition-all duration-500 ${
           isSelected
             ? "border-[#eb6be0] bg-[#effcff] shadow-[0_0_20px_rgba(44,187,209,0.25)]"
             : "border-slate-200 bg-white shadow-xl"
         }`}
       >
 
-        {/* Top */}
         <div className="flex items-center justify-between">
           <div className="text-4xl">
             <img
@@ -51,20 +48,16 @@ const Choose = ({
           </span>
         </div>
 
-        {/* Title */}
-        <h2 className="mt-7 text-2xl font-bold bg-gradient-to-r from-[#0a0807] to-[#100209] bg-clip-text text-transparent">
+        <h2 className="mt-7 text-2xl font-bold">
           {skillsData.name}
         </h2>
 
-        {/* Description */}
         <p className="mt-3 text-base leading-6 text-slate-500">
           {skillsData.description}
         </p>
 
-        {/* Divider */}
         <div className="my-5 border-t border-slate-100"></div>
 
-        {/* Info */}
         <div className="flex items-center justify-between text-sm">
           <span className="rounded-md bg-slate-100 px-3 py-1 text-slate-600">
             {skillsData.category}
@@ -79,15 +72,12 @@ const Choose = ({
           </span>
         </div>
 
-        {/* Button */}
         <button
           onClick={hendleisSelected}
           disabled={isSelected}
-          className={`mt-5 w-full rounded-xl py-3 font-semibold
-          transition-all duration-500
-          ${
+          className={`mt-5 w-full rounded-xl py-3 font-semibold transition-all duration-500 ${
             isSelected
-              ? "bg-[#efe4f0] text-[#c228ba] shadow-[0_0_15px_rgba(44,187,209,0.35)] cursor-not-allowed"
+              ? "bg-[#efe4f0] text-[#c228ba] cursor-not-allowed"
               : "bg-gradient-to-r from-[#190d05] to-[#17050e] text-white hover:opacity-90"
           }`}
         >

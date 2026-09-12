@@ -16,10 +16,6 @@ import type { DataType } from './Type'
  }
 
 
- 
-    
-
-
 function App() {
 
   return (
