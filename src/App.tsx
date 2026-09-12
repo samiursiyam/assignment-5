@@ -7,6 +7,7 @@ import Nev from './Comonent/Nev'
 import Tecnologi from './Comonent/Tecnologi'
 import './index.css'
 import type { DataType } from './Type'
+import Footer from './Comonent/Footer'
 
  const dataPromis =async():Promise<DataType> =>{
     const res = await fetch('/public/data.json') ;
@@ -28,6 +29,7 @@ function App() {
 
    <Tecnologi dataPromis={dataPromis()} ></Tecnologi>
    </Suspense>
+   <Footer></Footer>
   </>
   )
 }
