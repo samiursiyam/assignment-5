@@ -81,7 +81,7 @@ const Choose = ({
               : "bg-gradient-to-r from-[#190d05] to-[#17050e] text-white hover:opacity-90"
           }`}
         >
-          {isSelected ? "✓ Added to Stack" : "Available"}
+          {isSelected ? "✓ Added to Stack" : " Add to Stack"}
         </button>
 
       </div>
