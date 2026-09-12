@@ -14,16 +14,20 @@ const SelectedCard = ({
 }: TselectedIcon) => {
 
   const hendelOneDelete = (id: number) => {
-    const deletedOne = toslecte.filter((item) => item.id !== id);
+    const deletedOne = toslecte.filter(
+      (item) => item.id !== id
+    );
 
     settoslecte(deletedOne);
   };
 
   return (
     <div className="w-full max-w-sm rounded-2xl border border-gray-300 p-6 mt-3">
+
       <div className="flex justify-between items-center">
 
         <div className="flex gap-4 items-center">
+
           <img
             src={selectedIcon.icon}
             className="h-[30px]"
@@ -39,6 +43,7 @@ const SelectedCard = ({
               {selectedIcon.category}
             </h2>
           </div>
+
         </div>
 
         <button

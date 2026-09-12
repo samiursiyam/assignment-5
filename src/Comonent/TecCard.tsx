@@ -3,23 +3,17 @@ import type { DataType } from "../Type";
 import Choose from "./Choose";
 import Select from "./Select";
 
-
 interface TecCardProps {
   skillsData: DataType[];
-
-
 }
- 
-const TecCard = ({ skillsData }: TecCardProps) => {
 
-  
- const [toslecte ,settoslecte] = useState([])
+const TecCard = ({ skillsData }: TecCardProps) => {
+  const [toslecte, settoslecte] = useState<DataType[]>([]);
 
   return (
     <div>
       <div className="flex w-full my-5 justify-between gap-5">
 
-       
         <div className="w-3/4 grid grid-cols-3 gap-5">
           {skillsData.map((skillsData, int) => {
             return (
