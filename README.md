@@ -4,9 +4,9 @@ DevStack is a modern React-based web application where users can explore differe
 
 ## 🌐 Live Demo
 
-🔗 **Live Website:** Add your live website link here
+🔗 **Live Website:** https://assignment-5re.netlify.app/
 
-🔗 **GitHub Repository:** Add your GitHub repository link here
+🔗 **GitHub Repository:** https://github.com/samiursiyam/assignment-5
 
 ---
 
