@@ -18,7 +18,7 @@ DevStack is a modern React-based web application where users can explore differe
 * 📦 React Toastify
 * ⚡ Vite
 * 🗂️ JSON Data
-* 🧩 React Hooks (`useState`, `useEffect`)
+* 🧩 React Hooks (`useState`)
 
 ---
 
