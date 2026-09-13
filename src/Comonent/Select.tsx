@@ -1,3 +1,4 @@
+import { toast } from "react-toastify";
 import type { Dispatch, SetStateAction } from "react";
 import type { DataType } from "../Type";
 import SelectedCard from "./selectedCard";
@@ -8,6 +9,20 @@ interface SelectProps {
 }
 
 const Select = ({ toslecte, settoslecte }: SelectProps) => {
+
+  const handleRemoveAll = () => {
+    settoslecte([]);
+
+    toast.error("All technologies removed from stack", {
+      position: "top-right",
+      autoClose: 3000,
+      hideProgressBar: false,
+      closeOnClick: false,
+      pauseOnHover: true,
+      draggable: true,
+      theme: "light",
+    });
+  };
 
   if (toslecte.length === 0) {
     return (
@@ -57,14 +72,15 @@ const Select = ({ toslecte, settoslecte }: SelectProps) => {
           ))}
         </div>
 
-        <div className="w-full max-w-sm rounded-2xl border border-gray-300 p-3 mt-4 flex justify-center">
-          <button
-            onClick={() => settoslecte([])}
-            className="text-xl text-red-700 font-bold"
-          >
-            Remove All
-          </button>
-        </div>
+        <div className="w-full max-w-sm rounded-2xl border border-gray-300 p-3 mt-4">
+  <button
+    type="button"
+    onClick={handleRemoveAll}
+    className="w-full py-2 text-xl text-red-700 font-bold cursor-pointer"
+  >
+    Remove All
+  </button>
+</div>
 
       </div>
     </div>

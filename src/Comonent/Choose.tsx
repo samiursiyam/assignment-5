@@ -1,4 +1,5 @@
 
+import { toast, Bounce } from "react-toastify";
 import type { DataType } from "../Type";
 import type { Dispatch, SetStateAction } from "react";
 
@@ -20,9 +21,22 @@ const Choose = ({
 
   const hendleisSelected = () => {
     if (isSelected) return;
+toast(`${skillsData.name} ...... add to stack`, {
+position: "top-right",
+autoClose: 5000,
+hideProgressBar: false,
+closeOnClick: false,
+pauseOnHover: true,
+draggable: true,
+progress: undefined,
+theme: "light",
+transition: Bounce,
+});
 
     settoslecte((prev) => [...prev, skillsData]);
   };
+
+
 
   return (
     <div>
@@ -43,9 +57,11 @@ const Choose = ({
             />
           </div>
 
-          <span className="rounded-full bg-sky-200 px-4 py-2 text-sm font-medium text-sky-600 border border-sky-100">
-            {skillsData.badge}
-          </span>
+            <span
+    className={`inline-block mt-1 px-3 py-1 text-xs font-medium rounded-full  ${skillsData.badgeColor}`}
+  >
+    {skillsData.badge}
+  </span>
         </div>
 
         <h2 className="mt-7 text-2xl font-bold">

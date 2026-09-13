@@ -1,3 +1,4 @@
+import { toast } from "react-toastify";
 import type { Dispatch, SetStateAction } from "react";
 import type { DataType } from "../Type";
 
@@ -14,11 +15,22 @@ const SelectedCard = ({
 }: TselectedIcon) => {
 
   const hendelOneDelete = (id: number) => {
+
     const deletedOne = toslecte.filter(
       (item) => item.id !== id
     );
 
     settoslecte(deletedOne);
+
+    toast.error(`${selectedIcon.name} removed from stack`, {
+      position: "top-right",
+      autoClose: 3000,
+      hideProgressBar: false,
+      closeOnClick: false,
+      pauseOnHover: true,
+      draggable: true,
+      theme: "light",
+    });
   };
 
   return (
