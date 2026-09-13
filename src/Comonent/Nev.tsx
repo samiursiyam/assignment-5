@@ -5,7 +5,7 @@ const Nev = () => {
         <div className=" shadow-2xl shadow-gray-300 h-13">
             <nav className=" flex justify-between container m-auto bg mt-4    "  >
                 <div className=" flex">
-                    <img src="/src/assets/logo-text.png" alt="" />
+                    <img src="/logo-text.png" alt="" />
           
                 
                 </div>

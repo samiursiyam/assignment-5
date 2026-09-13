@@ -8,7 +8,7 @@
     "category": "Frontend",
     "level": "Beginner-Friendly",
     "rating": 4.9,
-    "icon": "/src/assets/React.png"
+    "icon": "/React.png"
   },
   {
     "id": 2,
@@ -19,7 +19,7 @@
     "category": "Frontend",
     "level": "Beginner-Friendly",
     "rating": 4.8,
-    "icon": "/src/assets/Vue.js.png"
+    "icon": "/Vue.js.png"
   },
   {
     "id": 3,
@@ -30,7 +30,7 @@
     "category": "Frontend",
     "level": "Intermediate",
     "rating": 4.8,
-    "icon": "/src/assets/Svelte.png"
+    "icon": "/Svelte.png"
   },
   {
     "id": 4,
@@ -41,7 +41,7 @@
     "category": "Frontend",
     "level": "Intermediate",
     "rating": 4.9,
-    "icon": "/src/assets/Next.js.png"
+    "icon": "/Next.js.png"
   },
   {
     "id": 5,
@@ -52,7 +52,7 @@
     "category": "Backend",
     "level": "Intermediate",
     "rating": 4.8,
-    "icon": "/src/assets/Node.js.png"
+    "icon": "/Node.js.png"
   },
   {
     "id": 6,
@@ -63,7 +63,7 @@
     "category": "Database",
     "level": "Intermediate",
     "rating": 4.9,
-    "icon": "/src/assets/PostgresSQL.png"
+    "icon": "/PostgresSQL.png"
   },
   {
     "id": 7,
@@ -74,7 +74,7 @@
     "category": "Database",
     "level": "Intermediate",
     "rating": 4.8,
-    "icon": "/src/assets/Redis.png"
+    "icon": "/Redis.png"
   },
   {
     "id": 8,
@@ -85,7 +85,7 @@
     "category": "Language",
     "level": "Beginner-Friendly",
     "rating": 4.9,
-    "icon": "/src/assets/JavaScript.png"
+    "icon": "/JavaScript.png"
   },
   {
     "id": 9,
@@ -96,7 +96,7 @@
     "category": "Language",
     "level": "Intermediate",
     "rating": 4.9,
-    "icon": "/src/assets/TypeScript.png"
+    "icon": "/TypeScript.png"
   },
   {
     "id": 10,
@@ -107,7 +107,7 @@
     "category": "Language",
     "level": "Intermediate",
     "rating": 4.6,
-    "icon": "/src/assets/Spring.png"
+    "icon": "/Spring.png"
   },
   {
     "id": 11,
@@ -118,7 +118,7 @@
     "category": "Styling",
     "level": "Beginner-Friendly",
     "rating": 4.9,
-    "icon": "/src/assets/vite.svg"
+    "icon": "/vite.svg"
   },
   {
     "id": 12,
@@ -129,6 +129,6 @@
     "category": "DevOps",
     "level": "Intermediate",
     "rating": 4.9,
-    "icon": "/src/assets/banner-stack.png"
+    "icon": "/banner-stack.png"
   }
 ]

@@ -11,7 +11,7 @@ const Footer = () => {
                 <div className="grid grid-cols-1 md:grid-cols-4 gap-12 mb-16">
                     
                     <div>
-                        <img src="/src/assets/logo-text.png" alt="" />
+                        <img src="/logo-text.png" alt="" />
                         <p className="text-sm text-gray-500 leading-relaxed mb-6 pr-4">
                             Curated tools, technologies, and resources for developers building modern software.
                         </p>

@@ -40,7 +40,7 @@ const Headers = () => {
       {/* Banner Image */}
       <div>
         <img
-          src="/src/assets/banner-stack.png"
+          src="/banner-stack.png"
           alt="Development Stack"
           className="w-full max-w-md"
         />
