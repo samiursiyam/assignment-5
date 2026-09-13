@@ -13,9 +13,7 @@ const SelectedCard = ({
   toslecte,
   settoslecte,
 }: TselectedIcon) => {
-
   const hendelOneDelete = (id: number) => {
-
     const deletedOne = toslecte.filter(
       (item) => item.id !== id
     );
@@ -35,15 +33,13 @@ const SelectedCard = ({
 
   return (
     <div className="w-full max-w-sm rounded-2xl border border-gray-300 p-6 mt-3">
-
       <div className="flex justify-between items-center">
-
         <div className="flex gap-4 items-center">
-
+          
           <img
             src={selectedIcon.icon}
-            className="h-[30px]"
-            alt=""
+            className="w-10 h-10 object-contain"
+            alt={selectedIcon.name}
           />
 
           <div>
@@ -55,16 +51,14 @@ const SelectedCard = ({
               {selectedIcon.category}
             </h2>
           </div>
-
         </div>
 
         <button
           onClick={() => hendelOneDelete(selectedIcon.id)}
-          className="text-gray-400"
+          className="text-gray-400 hover:text-red-500 text-xl"
         >
-          x
+          ×
         </button>
-
       </div>
     </div>
   );

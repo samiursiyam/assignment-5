@@ -1,37 +1,37 @@
+import { Suspense } from "react";
+import Headers from "./Comonent/Header";
+import Nev from "./Comonent/Nev";
+import Tecnologi from "./Comonent/Tecnologi";
+import Footer from "./Comonent/Footer";
+import "./index.css";
+import type { DataType } from "./Type";
 
-import { Suspense } from 'react'
-import Headers from './Comonent/Header'
+const dataPromis = async (): Promise<DataType[]> => {
+  const res = await fetch("/data.json");
 
+  if (!res.ok) {
+    throw new Error("Failed to fetch data");
+  }
 
-import Nev from './Comonent/Nev'
-import Tecnologi from './Comonent/Tecnologi'
-import './index.css'
-import type { DataType } from './Type'
-import Footer from './Comonent/Footer'
+  const data: DataType[] = await res.json();
 
- const dataPromis =async():Promise<DataType> =>{
-    const res = await fetch('/public/data.json') ;
-    const data = await res.json();
-    return data;
-
- }
-
+  return data;
+};
 
 function App() {
-
   return (
-  <>
-   <Nev></Nev>
+    <>
+      <Nev />
 
-   <Headers></Headers>
+      <Headers />
 
-   <Suspense fallback={<p> Loding....</p>}>
+      <Suspense fallback={<p>Loading....</p>}>
+        <Tecnologi dataPromis={dataPromis()} />
+      </Suspense>
 
-   <Tecnologi dataPromis={dataPromis()} ></Tecnologi>
-   </Suspense>
-   <Footer></Footer>
-  </>
-  )
+      <Footer />
+    </>
+  );
 }
 
-export default App
+export default App;

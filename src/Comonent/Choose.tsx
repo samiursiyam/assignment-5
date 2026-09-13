@@ -1,4 +1,3 @@
-
 import { toast, Bounce } from "react-toastify";
 import type { DataType } from "../Type";
 import type { Dispatch, SetStateAction } from "react";
@@ -14,66 +13,67 @@ const Choose = ({
   toslecte,
   settoslecte,
 }: ChooseProps) => {
-
   const isSelected = toslecte.some(
     (item) => item.id === skillsData.id
   );
 
   const hendleisSelected = () => {
     if (isSelected) return;
-toast(`${skillsData.name} ...... add to stack`, {
-position: "top-right",
-autoClose: 5000,
-hideProgressBar: false,
-closeOnClick: false,
-pauseOnHover: true,
-draggable: true,
-progress: undefined,
-theme: "light",
-transition: Bounce,
-});
 
     settoslecte((prev) => [...prev, skillsData]);
+
+    toast.success(`${skillsData.name} added to stack`, {
+      position: "top-right",
+      autoClose: 3000,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true,
+      theme: "light",
+      transition: Bounce,
+    });
   };
-
-
 
   return (
     <div>
       <div
         className={`w-full max-w-sm rounded-2xl border p-6 transition-all duration-500 ${
           isSelected
-            ? "border-[#eb6be0] bg-[#effcff] shadow-[0_0_20px_rgba(44,187,209,0.25)]"
+            ? "border-pink-400 bg-cyan-50 shadow-lg"
             : "border-slate-200 bg-white shadow-xl"
         }`}
       >
-
+        {/* Icon and Badge */}
         <div className="flex items-center justify-between">
           <div className="text-4xl">
             <img
               src={skillsData.icon}
-              alt=""
-              className="h-[40px] w-[40px]"
+              alt={skillsData.name}
+              className="h-10 w-10"
             />
           </div>
 
-            <span
-    className={`inline-block mt-1 px-3 py-1 text-xs font-medium rounded-full  ${skillsData.badgeColor}`}
-  >
-    {skillsData.badge}
-  </span>
+          <span
+            className={`mt-1 inline-block rounded-full  px-3 py-1 text-xs font-medium ${skillsData.badgeColor}`}
+          >
+            {skillsData.badge}
+          </span>
         </div>
 
+        {/* Name */}
         <h2 className="mt-7 text-2xl font-bold">
           {skillsData.name}
         </h2>
 
+        {/* Description */}
         <p className="mt-3 text-base leading-6 text-slate-500">
           {skillsData.description}
         </p>
 
+        {/* Divider */}
         <div className="my-5 border-t border-slate-100"></div>
 
+        {/* Information */}
         <div className="flex items-center justify-between text-sm">
           <span className="rounded-md bg-slate-100 px-3 py-1 text-slate-600">
             {skillsData.category}
@@ -84,22 +84,23 @@ transition: Bounce,
           </span>
 
           <span className="font-medium text-slate-700">
-            ⭐️ {skillsData.rating}
+            ⭐ {skillsData.rating}
           </span>
         </div>
 
+        {/* Add Button */}
         <button
+          type="button"
           onClick={hendleisSelected}
           disabled={isSelected}
           className={`mt-5 w-full rounded-xl py-3 font-semibold transition-all duration-500 ${
             isSelected
-              ? "bg-[#efe4f0] text-[#c228ba] cursor-not-allowed"
-              : "bg-gradient-to-r from-[#190d05] to-[#17050e] text-white hover:opacity-90"
+              ? "cursor-not-allowed bg-fuchsia-100 text-fuchsia-700"
+              : "bg-slate-900 text-white hover:bg-slate-800"
           }`}
         >
-          {isSelected ? "✓ Added to Stack" : " Add to Stack"}
+          {isSelected ? "✓ Added to Stack" : "Add to Stack"}
         </button>
-
       </div>
     </div>
   );
